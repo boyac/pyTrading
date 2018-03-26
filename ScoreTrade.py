@@ -2,7 +2,7 @@
 # @Author: Boya Chiou
 # @Date:   2018-03-22 17:16:22
 # @Last Modified by:   Boya Chiou
-# @Last Modified time: 2018-03-26 11:16:04
+# @Last Modified time: 2018-03-26 11:21:24
 
 
 class ScoreTrade(object):
@@ -10,7 +10,7 @@ class ScoreTrade(object):
 	def __init__(self, ticker):
 		self.ticker = ticker
 
-	def entry_score(self, high, low, bought):
+	def entry_score(self, high=0, low=0, bought=0):
 		"""進場分數(控制在50以下) 1 - High-Buy/(High-Low) * 100"""
 		self.bought = bought
 		entrys = (1-(high-self.bought)/(high-low))*100
@@ -19,7 +19,7 @@ class ScoreTrade(object):
 		else:
 			print "entry score = {} / Keep it below 50".format(entrys)
 
-	def exit_score(self, high, low, sold):
+	def exit_score(self, high=0, low=0, sold=0):
 		"""出場分數(控制在50以上) 1 - High-Sell/(High-Low) * 100"""
 		self.sold = sold
 		exits = (1 - (high-self.sold)/(high-low))*100
@@ -28,7 +28,7 @@ class ScoreTrade(object):
 		else:
 			print "exit score = {} / Keep it above 50".format(exits)
 
-	def channel_score(self, channel_h, channel_l):
+	def channel_score(self, channel_h=0, channel_l=0):
 		#self.bought = bought
 		#self.sold = sold
 		self.channel_h = channel_h
@@ -45,7 +45,7 @@ class ScoreTrade(object):
 		else:
 			print "Channel Score: D" 
 
-	def target_price(self, fee, quantity):
+	def target_price(self, fee=0, quantity=0):
 		self.target = 0.3*self.channel_width+self.bought+fee/quantity
 		print "{} / Target Price: {}".format(self.ticker, self.target)
 
@@ -53,7 +53,7 @@ class ScoreTrade(object):
 		""""""
 		pass
 
-	def twopct_money(self, total, buy):
+	def twopct_money(self, total=0, buy=0):
 		"""Date, account equity, 2%, 6%"""
 		self.total = total
 		self.buy = buy 
@@ -67,17 +67,17 @@ class ScoreTrade(object):
 
 if __name__ == "__main__":
 	S = ScoreTrade('THD')
-	
+
 	#How do I know the high and low of the day before I make a buy decision?
-	S.entry_score(104, 95, 95)
+	S.entry_score(high=104, low=95, bought=95)
 	#How do I know the high and low of the day before I make a sell decision?
-	S.exit_score(104, 95, 103)
+	S.exit_score(high=104, low=95, sold=103)
 
-	S.channel_score(104.97, 85.88)
-	S.target_price(2.95, 10)
+	S.channel_score(channel_h=104.97, channel_l=85.88)
+	S.target_price(fee=2.95, quantity=10)
 
-	S.twopct_money(3000,246)
-	S.twopct_money(3000,84)
+	S.twopct_money(total=3000, buy=246)
+	S.twopct_money(total=3000, buy=84)
 
 
 	"""
