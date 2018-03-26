@@ -2,7 +2,7 @@
 # @Author: Boya Chiou
 # @Date:   2018-03-22 17:16:22
 # @Last Modified by:   Boya Chiou
-# @Last Modified time: 2018-03-24 19:28:07
+# @Last Modified time: 2018-03-26 11:16:04
 
 
 class ScoreTrade(object):
@@ -49,23 +49,20 @@ class ScoreTrade(object):
 		self.target = 0.3*self.channel_width+self.bought+fee/quantity
 		print "{} / Target Price: {}".format(self.ticker, self.target)
 
-
 	def equity_curve(self):
 		""""""
 		pass
 
 	def twopct_money(self, total, buy):
-		"""Date, account equity, 2%, 3%"""
+		"""Date, account equity, 2%, 6%"""
 		self.total = total
 		self.buy = buy 
 		#self.stoploss = stoploss
 		self.stoploss = self.buy*0.9 #-10%
 		#self.position = (self.total*0.02)/(self.buy-self.stoploss)
 		self.position = (self.total*0.02)/(0.1*self.buy) # self.buy - 0.9*self.buy
-		print "Allowed Position: {}".format(self.position)
+		print "Allowed Position: {}".format(round(self.position))
 
-	def sixpct_money(self):
-		
 
 
 if __name__ == "__main__":
@@ -79,7 +76,9 @@ if __name__ == "__main__":
 	S.channel_score(104.97, 85.88)
 	S.target_price(2.95, 10)
 
-	S.money_management(12000,246)
+	S.twopct_money(3000,246)
+	S.twopct_money(3000,84)
+
 
 	"""
 	Note: THD exit @ 101.022
