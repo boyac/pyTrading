@@ -2,7 +2,7 @@
 # @Author: Boya Chiou
 # @Date:   2018-03-22 17:16:22
 # @Last Modified by:   Boya Chiou
-# @Last Modified time: 2018-03-26 11:21:24
+# @Last Modified time: 2018-03-26 15:09:44
 
 
 class ScoreTrade(object):
@@ -15,18 +15,18 @@ class ScoreTrade(object):
 		self.bought = bought
 		entrys = (1-(high-self.bought)/(high-low))*100
 		if entrys < 50:
-			print "entry score = {} / Below 50, Good Job".format(entrys)
+			print "Entry score = {} / Below 50, Good Job".format(entrys)
 		else:
-			print "entry score = {} / Keep it below 50".format(entrys)
+			print "Entry score = {} / Keep it below 50".format(entrys)
 
 	def exit_score(self, high=0, low=0, sold=0):
 		"""出場分數(控制在50以上) 1 - High-Sell/(High-Low) * 100"""
 		self.sold = sold
 		exits = (1 - (high-self.sold)/(high-low))*100
 		if exits > 50:
-			print "exit score = {} / Above 50, Good Job".format(exits)
+			print "Exit score = {} / Above 50, Good Job".format(exits)
 		else:
-			print "exit score = {} / Keep it above 50".format(exits)
+			print "Exit score = {} / Keep it above 50".format(exits)
 
 	def channel_score(self, channel_h=0, channel_l=0):
 		#self.bought = bought
@@ -53,16 +53,29 @@ class ScoreTrade(object):
 		""""""
 		pass
 
-	def twopct_money(self, total=0, buy=0):
+	def twopct_money(self, ticker=None, total=0, buy=0):
 		"""Date, account equity, 2%, 6%"""
+		self.ticker = ticker
 		self.total = total
 		self.buy = buy 
 		#self.stoploss = stoploss
 		self.stoploss = self.buy*0.9 #-10%
 		#self.position = (self.total*0.02)/(self.buy-self.stoploss)
 		self.position = (self.total*0.02)/(0.1*self.buy) # self.buy - 0.9*self.buy
-		print "Allowed Position: {}".format(round(self.position))
+		print "{} / Allowed Position: {}".format(self.ticker, round(self.position))
 
+
+	def sixpct_money(self, ticker=None, total=0, buy=0, stock_num=0):
+		"""Date, account equity, 2%, 6%"""
+		self.ticker = ticker
+		self.total = total
+		self.buy = buy
+		self.stock_num = stock_num 
+		#self.stoploss = stoploss
+		self.stoploss = self.buy*0.9 #-10%
+		#self.position = (self.total*0.02)/(self.buy-self.stoploss)
+		self.position = (self.total*0.06/self.stock_num)/(0.1*self.buy) # self.buy - 0.9*self.buy
+		print "{} / Allowed Position: {}".format(self.ticker, round(self.position))
 
 
 if __name__ == "__main__":
@@ -76,8 +89,8 @@ if __name__ == "__main__":
 	S.channel_score(channel_h=104.97, channel_l=85.88)
 	S.target_price(fee=2.95, quantity=10)
 
-	S.twopct_money(total=3000, buy=246)
-	S.twopct_money(total=3000, buy=84)
+	#S.twopct_money(total=3000, buy=246)
+	#S.twopct_money(total=3000, buy=84)
 
 
 	"""
