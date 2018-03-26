@@ -78,6 +78,7 @@ class ScoreTrade(object):
 		print "{} / Allowed Position: {}".format(self.ticker, round(self.position))
 
 
+		
 if __name__ == "__main__":
 	S = ScoreTrade('THD')
 
