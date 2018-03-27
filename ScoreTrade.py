@@ -64,7 +64,6 @@ class ScoreTrade(object):
 		self.position = (self.total*0.02)/(0.1*self.buy) # self.buy - 0.9*self.buy
 		print "{} / Allowed Position: {}".format(self.ticker, round(self.position))
 
-
 	def sixpct_money(self, ticker=None, total=0, buy=0, stock_num=0):
 		"""Date, account equity, 2%, 6%"""
 		self.ticker = ticker
