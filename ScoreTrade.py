@@ -2,7 +2,7 @@
 # @Author: Boya Chiou
 # @Date:   2018-03-22 17:16:22
 # @Last Modified by:   Boya Chiou
-# @Last Modified time: 2018-03-26 15:09:44
+# @Last Modified time: 2018-03-27 08:41:34
 
 
 class ScoreTrade(object):
@@ -78,7 +78,7 @@ class ScoreTrade(object):
 		print "{} / Allowed Position: {}".format(self.ticker, round(self.position))
 
 
-		
+
 if __name__ == "__main__":
 	S = ScoreTrade('THD')
 
@@ -97,3 +97,5 @@ if __name__ == "__main__":
 	"""
 	Note: THD exit @ 101.022
 	"""
+
+	print "-------------------BREAK-------------------"
