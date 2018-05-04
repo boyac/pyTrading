@@ -95,6 +95,7 @@ if __name__ == "__main__":
 
 	"""
 	Note: THD exit @ 101.022
+	*0.97 of upper edge of the channel
 	"""
 
 	print "-------------------BREAK-------------------"
