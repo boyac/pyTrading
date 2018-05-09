@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: Boya Chiou
 # @Date:   2018-03-22 17:16:22
-# @Last Modified by:   Boya Chiou
-# @Last Modified time: 2018-03-27 08:41:34
+# @Last Modified by:   boyac
+# @Last Modified time: 2018-05-09 22:55:35
 
 
 class ScoreTrade(object):
@@ -33,8 +33,8 @@ class ScoreTrade(object):
 		#self.sold = sold
 		self.channel_h = channel_h
 		self.channel_l = channel_l
-		self.channel_width = self.channel_h-self.channel_l
-		self.pctg = (self.sold-self.bought)/self.channel_width
+		self.channel_width = float(self.channel_h-self.channel_l)
+		self.pctg = float((self.sold-self.bought)/self.channel_width)
 
 		if self.pctg >= 0.3:
 			print "Channel Score: A"
@@ -42,8 +42,10 @@ class ScoreTrade(object):
 			print "Channel Score: B"
 		elif 0.2 > self.pctg >= 0.1:
 			print "Channel Score: C"
-		else:
+		elif self.pctg < 0.1:
 			print "Channel Score: D" 
+
+		#print self.pctg
 
 	def target_price(self, fee=0, quantity=0):
 		self.target = 0.3*self.channel_width+self.bought+fee/quantity
@@ -84,11 +86,11 @@ if __name__ == "__main__":
 	#How do I know the high and low of the day before I make a buy decision?
 	S.entry_score(high=104, low=95, bought=95)
 	#How do I know the high and low of the day before I make a sell decision?
-	S.exit_score(high=104, low=95, sold=103)
+	S.exit_score(high=101, low=98, sold=101)
 
-	S.channel_score(channel_h=104.97, channel_l=85.88)
+	S.channel_score(channel_h=103, channel_l=93)
 	S.target_price(fee=2.95, quantity=10)
-
+	
 	#S.twopct_money(total=3000, buy=246)
 	#S.twopct_money(total=3000, buy=84)
 
