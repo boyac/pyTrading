@@ -1,2 +1,2 @@
 # pyTrading
-Based on the concepts in "Come Into My Trading Room"
+Based on the concepts in "Come Into My Trading Room" and others
