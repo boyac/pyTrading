@@ -1,2 +1,3 @@
 # pyTrading
-Based on the concepts in "CIMTR" and others
+- based on the concepts in "CIMTR" and others
+- swing trading
