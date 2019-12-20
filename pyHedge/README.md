@@ -1,6 +1,6 @@
 # pyHedge
 * Long/Short Equity
-	** Long/short equity TMT
+	* Long/short equity TMT
 	-- Long/short equity biotech
 
 - Event Driven
