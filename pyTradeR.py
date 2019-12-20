@@ -2,7 +2,7 @@
 # @Author: Boya Chiou
 # @Date: 2018-03-22 17:16:22
 # @Last Modified by: boyac
-# @Last Modified time: 2019-12-17 14:29:36
+# @Last Modified time: 2019-12-20 13:19:49
 
 import ffn
 
@@ -78,8 +78,6 @@ class ScoreTrade(object):
 if __name__ == "__main__":
 	S = ScoreTrade('THD', 1000)
 
-
-
 	"""
 	Note: THD exit @ 101.022
 	*0.94 of upper edge of the channel
@@ -96,3 +94,4 @@ if __name__ == "__main__":
 
 	print S.mm(price=90, exposure=0.2, stoploss=0.2)
 
+	# test sublime git
