@@ -2,7 +2,7 @@
 # @Author: boyac
 # @Date: 2019-12-23 08:15:15
 # @Last Modified by: boyac
-# @Last Modified time: 2019-12-23 09:27:38
+# @Last Modified time: 2019-12-23 09:29:30
 
 import ffn
 import bt
@@ -12,7 +12,6 @@ class MF():
 	Definition:
 		- earnings yield: =EBIT/EV, =EPS/Price (i) or PE's reciprocal
 		- return on capital: =(Net income - Dividens) / (Debt + Equity)
-
 
 	"""
 
