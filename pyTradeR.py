@@ -2,7 +2,7 @@
 # @Author: Boya Chiou
 # @Date: 2018-03-22 17:16:22
 # @Last Modified by: boyac
-# @Last Modified time: 2019-12-20 13:19:49
+# @Last Modified time: 2019-12-23 09:06:48
 
 import ffn
 
@@ -94,4 +94,4 @@ if __name__ == "__main__":
 
 	print S.mm(price=90, exposure=0.2, stoploss=0.2)
 
-	# test sublime git
+	# test sublime git, global variable
