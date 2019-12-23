@@ -2,7 +2,7 @@
 # @Author: boyac
 # @Date: 2019-12-23 08:15:15
 # @Last Modified by: boyac
-# @Last Modified time: 2019-12-23 08:54:09
+# @Last Modified time: 2019-12-23 09:04:10
 
 import ffn
 import bt
@@ -19,4 +19,3 @@ class MagicFormula():
 
 
 if __name__ == "__main__":
-	pass
