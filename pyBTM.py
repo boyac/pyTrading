@@ -2,7 +2,7 @@
 # @Author: boyac
 # @Date: 2019-12-23 08:15:15
 # @Last Modified by: boyac
-# @Last Modified time: 2019-12-23 09:29:30
+# @Last Modified time: 2019-12-23 09:44:48
 
 import ffn
 import bt
@@ -20,3 +20,4 @@ class MF():
 
 
 if __name__ == "__main__":
+	pass
