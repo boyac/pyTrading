@@ -7,11 +7,10 @@
 import ffn
 import bt
 
-class MagicFormula():
+class MF():
 	"""
 	ref:
-		https://www.magicformulainvesting.com/
-
+	    BTM
 	"""
 
 	pass
