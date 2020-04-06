@@ -5,7 +5,7 @@
 # @Last Modified time: 2020-03-31 16:35:30
 
 
-class AMAM(object):
+class AMFAM(object):
 	"""
 	By luck, almost immediately after we began the indicators project at the end of 1979, 
 	one of our researchers stumbled on the germinal idea for statistical arbitrage – 
