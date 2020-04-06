@@ -7,7 +7,7 @@
 import ffn
 import bt
 
-class MF():
+class TLBBM():
 	"""
 	Definition:
 		- earnings yield: =EBIT/EV, =EPS/Price (i) or PE's reciprocal
