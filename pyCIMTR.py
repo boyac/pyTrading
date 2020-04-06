@@ -2,11 +2,11 @@
 # @Author: Boya Chiou
 # @Date: 2018-03-22 17:16:22
 # @Last Modified by: boyac
-# @Last Modified time: 2019-12-23 09:06:48
+# @Last Modified time: 2020-04-06 10:22:48
 
 import ffn
 
-class ScoreTrade(object):
+class CIMTR(object):
 	"""docstring for ClassName"""
 	def __init__(self, ticker, principal):
 		self.ticker = ticker
@@ -73,10 +73,9 @@ class ScoreTrade(object):
 			print "Exposure over Threshold!"
 
 
-	
 
 if __name__ == "__main__":
-	S = ScoreTrade('THD', 1000)
+	c = CIMTR('THD', 1000)
 
 	"""
 	Note: THD exit @ 101.022
@@ -92,6 +91,6 @@ if __name__ == "__main__":
 	# for index, row in highlow.iterrows():
 	# 	print row, S.entry_score(row['pcghigh'], row['pcglow'], 3.8)
 
-	print S.mm(price=90, exposure=0.2, stoploss=0.2)
+	print c.mm(price=90, exposure=0.2, stoploss=0.2)
 
 	# test sublime git, global variable
