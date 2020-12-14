@@ -8,8 +8,8 @@
 Leveraged investnebt are amplified compared to an otherwise identical unleveraged investment.
 	Gains are higher and losses are worse, so it is a high risk/high reward strategy.
 	The return on a leveraged investment can be calculated as:
-	- R_li = R_ui + [(D/E) * (R_ui - c)]
-  	- R_li = (Ending value with leverage - starting value with leverage - borrowing cost) / start value with leverage
+	# R_li = R_ui + [(D/E) * (R_ui - c)]
+  	# R_li = (Ending value with leverage - starting value with leverage - borrowing cost) / start value with leverage
 
 	R_li: leveraged return
 	R_ui: unleveraged return
