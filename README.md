@@ -9,7 +9,7 @@
 - R_li = R_ui + [(D/E) * (R_ui - c)]
 - R_li = (Ending value with leverage - starting value with leverage - borrowing cost) / start value with leverage
 
-- R_li: leveraged return
-- R_ui: unleveraged return
-- D/E : borrowing ratio
-- c   : cost of borrowing
+-- R_li: leveraged return
+-- R_ui: unleveraged return
+-- D/E : borrowing ratio
+-- c   : cost of borrowing
