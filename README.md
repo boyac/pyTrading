@@ -6,7 +6,7 @@
 </br>*[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/boyac?locale.x=en_US)
 
 ## Formula
-- Leveraged investnebt are amplified compared to an otherwise identical unleveraged investment. Gains are higher and losses are worse, so it is a high risk/high reward strategy. The return on a leveraged investment can be calculated as:
+- Leveraged investment are amplified compared to an otherwise identical unleveraged investment. Gains are higher and losses are worse, so it is a high risk/high reward strategy. The return on a leveraged investment can be calculated as:
 - R_li = R_ui + [(D/E) * (R_ui - c)]
 - R_li = (Ending value with leverage - starting value with leverage - borrowing cost) / start value with leverage
 
