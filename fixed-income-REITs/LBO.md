@@ -1,4 +1,7 @@
-## 總報酬率
+## Guideline
+High dvd, high dvd growth, yield > 6%, high dvd sectors
+
+### 總報酬率
 = 淨利 / 自有資金  
 =（期初淨值 * 資產報酬率 - 貸款 * 利率）/ 自有資金  
 =（（貸款 + 自有資金）* 資產報酬率 - 貸款 * 利率）/ 自有資金  
