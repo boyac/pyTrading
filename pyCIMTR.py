@@ -14,7 +14,7 @@ class CIMTR(object):
 
 
 	def entry_score(self, high=0, low=0, bought=0):
-		"""進場分數(控制在50以下) 1 - (High - Buy)/(High - Low) * 100"""
+		"""entry(below 50) 1 - (High - Buy)/(High - Low) * 100"""
 		self.bought = bought
 		entrys = (1 - (high - self.bought) / (high - low)) * 100
 		if entrys < 50:
@@ -24,7 +24,7 @@ class CIMTR(object):
 
 
 	def exit_score(self, high=0, low=0, sold=0):
-		"""出場分數(控制在50以上) 1 - High-Sell/(High-Low) * 100"""
+		"""exit(above 50) 1 - High-Sell/(High-Low) * 100"""
 		self.sold = sold
 		exits = (1 - (high - self.sold) / (high - low)) * 100
 		if exits > 50:
